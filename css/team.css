@@ -1,0 +1,60 @@
+.team-item {
+    position: relative;
+    margin: 20px auto; /* Center each circle */
+    width: 150px; /* Set the size of the circle */
+    height: 150px;
+}
+
+.team-circle {
+    width: 100%; /* Full width of the container */
+    height: 100%;
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden; /* Clip overflow content */
+    box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px #dadbdb; /* Optional border effect */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.team-circle:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.team-photo {
+    width: 100%; /* Image should fill the circle */
+    height: 100%;
+    border-radius: 50%; /* Keep image itself circular */
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+.team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circular overlay */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay color */
+    opacity: 0; /* Hidden by default */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    transition: opacity 0.4s ease-in-out; /* Smooth transition */
+}
+
+.team-circle:hover .team-hover {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.team-hover i {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.team-hover p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}

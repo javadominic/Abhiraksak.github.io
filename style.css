@@ -1,0 +1,119 @@
+  /* Popup styling */
+  .popup-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;/* Style for the popup container */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #333;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background: #fff;
+        z-index: 1000;
+        width: 300px;
+        border-radius: 10px;
+
+        /* Default scale to 0 (hidden) */
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease-out;
+    }
+
+    /* Background overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    /* Close button */
+    .close-btn {
+        display: inline-block;
+        margin-top: 10px;
+        cursor: pointer;
+        padding: 5px 10px;
+        background: #ff5c5c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+    /* Scale-up animation */
+    .popup.show {
+        display: block;
+        animation: scaleUp 0.4s ease-in-out forwards;
+    }
+
+    /* Floating animation keyframes */
+    @keyframes floating {
+        0% {
+            transform: translate(-50%, -50%) translateY(0px);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateY(-10px);
+        }
+        100% {
+            transform: translate(-50%, -50%) translateY(0px);
+        }
+    }
+
+    /* Scale-up keyframes */
+    @keyframes scaleUp {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        60% {
+            transform: translate(-50%, -50%) scale(1.05); /* Slight overshoot */
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1); /* Final scale */
+        }
+    }
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin: 0;
+}
+
+.popup-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.close-btn {
+    margin-top: 15px;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #555;
+}

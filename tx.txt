@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <!-- ICON FONTS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="everything">
+      <div class="left">
+        <div><i class="material-icons">auto_awesome_mosaic</i> DASHBOARD</div>
+        <nav class="left-nav">
+          <ul>
+            <li><i class="material-icons">home</i> HOME</li>
+            <li><i class="material-icons">badge</i> Profile</li>
+            <li><i class="material-icons">mode_comment</i> Messages</li>
+            <li><i class="material-icons">history</i> History</li>
+            <li><i class="material-icons">task</i> Tasks</li>
+            <li><i class="material-icons">forum</i> Community</li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">settings</i> Settings</li>
+            <li><i class="material-icons">support</i> Support</li>
+            <li><i class="material-icons">shield</i> Privacy</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right">
+        <div class="top-bar">
+          <div class="search-section">
+            <div class="top-bar-left">
+              <i class="material-icons">search</i>
+              <input type="text" name="search" id="search" />
+            </div>
+            <div class="top-bar-right">
+              <svg
+                class="notification-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#000"
+              >
+                <path
+                  d="M80-560q0-100 44.5-183.5T244-882l47 64q-60 44-95.5 111T160-560H80Zm720 0q0-80-35.5-147T669-818l47-64q75 55 119.5 138.5T880-560h-80ZM160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"
+                />
+              </svg>
+              <img
+                class="profile-picture"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
+                alt="Profile Avatar"
+              />
+              <b>Morgan Oakley</b>
+            </div>
+          </div>
+          <div class="top-bar-middle">
+            <div class="avatar big-avatar">
+              <img
+                style="height: 80px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
+                alt="Avatar"
+              />
+            </div>
+            <div class="hi-there">Hi there,</div>
+            <button class="b1">New</button>
+            <button class="b2">Upload</button>
+            <button class="b3">delete</button>
+            <div class="profile-name">ProfileName(@profile)</div>
+          </div>
+        </div>
+        <div class="bottom-right">
+          <div class="projects">
+            <span class="project-heading">Your Projects</span>
+            <div class="card">
+              <div></div>
+              <h3>Super Cool Project</h3>
+              <p>
+                Esse dolor officia dolore ad. Nostrud pariatur nisi aliqua
+                nostrud culpa laboris nisi quis elit amet incididunt
+                exercitation. Sit eiusmod velit minim fugiat velit incididunt
+                pariatur reprehenderit voluptate esse commodo nisi exercitation
+                commodo.
+              </p>
+            </div>
+         
+          </div>
+          <div class="at">
+            <div class="announcement">
+              <h3>Announcements</h3>
+              <div class="all-announcements">
+                
+               
+                <div class="a-card a-card-last">
+                  <h3>TITLE</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nesciunt sed voluptatibus consequatur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="trending">
+              <h3 class="t-header">Trending</h3>
+              <div class="t-items">
+                <div class="t-card">
+                  <div><img class="profile-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZRzCOTmTpG-0zKoHeoNr8J-LeI_ihfZO3Q&s" alt="avatar"></div>
+                  <div>
+                    <h3>@username</h3>
+                    <p>USERNAME</p>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --left-nav-gap: 2.4rem;
+    --list-item-padding: 5px 50px 5px 0;
+    --profile-picture-round: 50px;
+    --root-padding: 20px 50px 10px 20px;
+    --background-color: #e1e8f0;
+    --blue-color: #1892d3;
+    --font-color: white;
+    --shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.384);
+  }
+  
+  ul li {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--list-item-padding);
+  }
+  
+  .left-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--left-nav-gap);
+  }
+  
+  .everything {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  
+  .left {
+    padding: var(--root-padding);
+    color: var(--font-color);
+    background-color: var(--blue-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--left-nav-gap);
+  }
+  
+  #search {
+    border-radius: 20px;
+    background-color: var(--background-color);
+    width: 100%;
+    border: none;
+    height: 30px;
+  }
+  
+  .search-section {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  
+  .top-bar-right,
+  .top-bar-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .top-bar-right {
+    justify-content: flex-end;
+  }
+  
+  .profile-picture {
+    border-radius: var(--profile-picture-round);
+    height: 50px;
+  }
+  
+  .top-bar-middle {
+    display: grid;
+    grid-template-columns: 1fr 8fr repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+  }
+  
+  .big-avatar {
+    grid-row: 1/3;
+    padding-right: 20px;
+  }
+  
+  button {
+    background-color: var(--blue-color);
+    margin: 17px;
+    font-weight: 900;
+    padding: 10px 40px;
+    border: none;
+    color: var(--font-color);
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background-color: #1daaf7;
+  }
+  
+  .b1 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+  
+  .b2 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  
+  .b3 {
+    grid-column: 5/6;
+    grid-row: 1/3;
+  }
+  
+  .hi-there {
+    font-weight: 600;
+  }
+  
+  .profile-name {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  .top-bar {
+    box-shadow: var(--shadow);
+    padding: var(--root-padding);
+  }
+  
+  .bottom-right {
+    padding: var(--root-padding);
+    background-color: var(--background-color);
+    display: flex;
+    grid-auto-flow: column;
+  }
+  
+  .project-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  
+  .card {
+    margin: 35px 20px 20px 0;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  .card div {
+    background-color: orange;
+    width: 40px;
+  }
+  
+  .card h3,
+  .card p {
+    padding: 20px;
+  }
+  
+  .at {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+  
+  .all-announcements {
+    margin: 12px 0px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+  }
+  
+  .a-card {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(207, 207, 207);
+  }
+  
+  .a-card-last {
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+  
+  .t-header{
+    margin: 0 0 15px 0;
+  }
+  
+  .trending {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .t-items{
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+  }
+  
+  .t-card{
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .t-card p{
+    font-size: 12px;
+  }
+
+
+
+
+
+<?php
+// Database Connection
+$connect = mysqli_connect("localhost", "root", "", "team_web");
+
+// Check connection
+if (!$connect) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Get user ID from the URL
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+// Fetch user details from the database
+$sql = "SELECT * FROM member_details WHERE id = $id";
+$result = $connect->query($sql);
+$user = $result->fetch_assoc();
+
+// If user not found, show an error message
+if (!$user) {
+    echo "<h2>User not found</h2>";
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $user['first_name'] . ' ' . $user['last_name']; ?> - Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .profile-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        /* Profile Image Styling (Square or Rectangle) */
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            max-width: 350px; /* Adjust the width as needed */
+            max-height: 300px; /* Prevents oversized images */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .profile-details {
+            padding: 40px;
+        }
+
+        .profile-details h1 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 32px;
+        }
+
+        .profile-details p.about {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px; /* Square corners */
+            background: #2980b9;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-link:hover {
+            background: #1c6693;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .profile-image img {
+                max-width: 250px; /* Adjusted size for smaller screens */
+                max-height: 200px;
+            }
+
+            .profile-details h1 {
+                font-size: 24px; /* Reduced font size on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- Bootstrap Card -->
+                <div class="card profile-card">
+                    <div class="row no-gutters">
+                        <!-- Profile Image Section -->
+                        <div class="col-md-4 profile-image p-4">
+                            <img src="uploads/<?php echo $user['photo']; ?>" alt="<?php echo $user['first_name']; ?>'s Photo">
+                        </div>
+                        <!-- Profile Details Section -->
+                        <div class="col-md-8">
+                            <div class="card-body profile-details">
+                                <h1 class="card-title"><?php echo $user['first_name'] . ' ' . $user['last_name']; ?></h1>
+                                <p class="card-text about"><?php echo $user['about']; ?></p>
+                                <div class="social-media">
+                                    <?php if ($user['insta_link']) { ?>
+                                        <a href="<?php echo $user['insta_link']; ?>" target="_blank" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    <?php } ?>
+                                    <?php if ($user['twitter_link']) { ?>
+                                        <a href="<?php echo $user['twitter_link']; ?>" target="_blank" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    <?php } ?>
+                                    <?php if ($user['linkdine_link']) { ?>
+                                        <a href="<?php echo $user['linkdine_link']; ?>" target="_blank" class="social-link">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Back Button -->
+                <div class="text-center mt-4">
+                    <a href="team.php" class="btn btn-primary">Back to Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<?php
+$connect->close();
+?>
